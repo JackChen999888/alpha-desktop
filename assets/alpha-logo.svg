@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="480 257 864 864">
+  <title>Alpha — user-selected lime geometric brand mark</title>
+  <desc>Vector adaptation of the user reference, 2026-11-10. Transparent background.</desc>
+  <g fill="#454749">
+    <path d="M528 1034 912 324 1022 590 960 642 912 689Z"/>
+    <path d="m985 669 46-58 84 271Z"/>
+    <path d="m1213 437-68 60C1236 615 1230 768 1114 883l71 55C1338 783 1326 592 1213 437Z"/>
+  </g>
+  <g fill="#CCFF00">
+    <path d="M528 1034 912 324V551Z"/>
+    <path d="m912 551 48 91-48 47Z"/>
+    <path d="m1053 581-147 132 209 169-130-213Z"/>
+    <path d="m706 990 62-65C866 988 1000 973 1096 898l-17-29 96 79C1048 1076 843 1085 706 990Z"/>
+  </g>
+  <g fill="#F0EFE9">
+    <path d="m1035 577 88-218q44 30 79 67Z"/>
+    <path d="m648 947 67-61q25 23 53 39l-62 65q-32-18-58-43Z"/>
+  </g>
+</svg>

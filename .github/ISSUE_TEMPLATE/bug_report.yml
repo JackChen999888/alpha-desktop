@@ -1,0 +1,21 @@
+name: Bug report
+description: Report a reproducible Alpha issue
+title: "[Bug] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Alpha version and Windows version
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps, expected behavior, and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Redacted screenshots or logs
+      description: Do not include API keys, credentials, mail, private paths, or user data.

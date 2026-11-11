@@ -1,0 +1,29 @@
+name: Windows checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: windows-latest
+    timeout-minutes: 40
+    env:
+      CARGO_BUILD_JOBS: 2
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Rust
+        run: rustup toolchain install stable-x86_64-pc-windows-msvc --profile minimal
+      - name: Check all targets
+        run: cargo +stable-x86_64-pc-windows-msvc check --locked --all-targets
+      - name: Module regression tests
+        run: cargo +stable-x86_64-pc-windows-msvc test --locked --lib pro:: -- --test-threads=1
+      - name: Settings navigation regression
+        run: cargo +stable-x86_64-pc-windows-msvc test --locked --lib alpha_unified_settings_routes_and_renders_all_sections -- --test-threads=1
+      - name: Installer syntax
+        shell: pwsh
+        run: |
+          $parseErrors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $PWD 'scripts/install.ps1'), [ref]$null, [ref]$parseErrors) | Out-Null
+          if ($parseErrors) { throw ($parseErrors | Out-String) }
