@@ -18,7 +18,7 @@ jobs:
       - name: Check all targets
         run: cargo +stable-x86_64-pc-windows-msvc check --locked --all-targets
       - name: Module regression tests
-        run: cargo +stable-x86_64-pc-windows-msvc test --locked --lib pro:: -- --test-threads=1
+        run: 'cargo +stable-x86_64-pc-windows-msvc test --locked --lib pro:: -- --test-threads=1'
       - name: Settings navigation regression
         run: cargo +stable-x86_64-pc-windows-msvc test --locked --lib alpha_unified_settings_routes_and_renders_all_sections -- --test-threads=1
       - name: Installer syntax
