@@ -62,3 +62,7 @@ DeepSeek 密钥和邮箱凭据由 Windows 凭据管理器保存。使用翻译�
 - 图标及其他第三方来源见 [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt) 和资源目录中的许可证。产品名称和商标属于各自权利人。
 
 本仓库使用经过整理的源码快照作为首次公开提交，不包含个人开发历史、真实运行数据和机器专用验证记录。
+
+## Code signing policy
+
+正在准备 SignPath Foundation 免费开源签名申请，尚未获批；当前 v0.1.0 下载文件仍未签名。角色、构建来源与后续签名流程见 [Code signing policy](docs/CODE_SIGNING.md)。
