@@ -4,7 +4,7 @@
 
 Alpha 是基于 [Daozai](https://github.com/Renly1994/xiaotang-daozai) 二次开发的 Windows 桌面工具，部分通知功能参考 [Fly Island](https://github.com/flyl1u/fly-island)。使用 Rust、egui / eframe 和 Windows 原生接口实现。
 
-**当前为 0.1.0 开源预览版，发布源码与部署教程。请自行编译；暂未提供经过签名的安装包。**
+**当前为 0.1.0 开源预览版。普通用户直接下载安装包或免安装 ZIP，无需安装 Rust、Git、Visual Studio 或 Windows SDK。程序尚未进行商业代码签名。**
 
 [部署教程](docs/DEPLOYMENT.md) · [隐私说明](docs/PRIVACY.md) · [参与开发](CONTRIBUTING.md) · [MIT 许可](LICENSE)
 
@@ -26,28 +26,27 @@ Alpha 是基于 [Daozai](https://github.com/Renly1994/xiaotang-daozai) 二次开
 
 Bot 连接、AI 建议和作者赞助板块已移除。
 
-## 快速部署
+## 下载与安装
 
-准备 Windows 10/11 x64、Git、Rust MSVC stable，以及 Visual Studio 2022 C++ Build Tools 和 Windows SDK。在 PowerShell 中运行：
+| 适合谁 | 下载 | 使用方式 |
+| --- | --- | --- |
+| 普通用户（推荐） | [Windows x64 安装包](https://github.com/chennengjian/alpha-desktop/releases/download/v0.1.0/Alpha-Setup-v0.1.0-x64.exe) | 双击，按向导安装，使用桌面 Alpha 快捷方式 |
+| 不想安装的用户 | [Windows x64 免安装 ZIP](https://github.com/chennengjian/alpha-desktop/releases/download/v0.1.0/Alpha-v0.1.0-windows-x64.zip) | 完整解压后双击 Alpha.exe；不要直接在压缩包中运行 |
 
-```powershell
-git clone https://github.com/chennengjian/alpha-desktop.git
-cd alpha-desktop
-rustup toolchain install stable-x86_64-pc-windows-msvc --profile minimal
-cargo +stable-x86_64-pc-windows-msvc build --locked --release --bin daozai --bin desktop-island-event
-powershell -NoProfile -File .\scripts\install.ps1
-```
+[全部版本与 SHA-256](https://github.com/chennengjian/alpha-desktop/releases) · **[详细部署教程](docs/DEPLOYMENT.md)**
 
-安装脚本创建桌面和开始菜单快捷方式，程序默认位于 `%LOCALAPPDATA%\Programs\Alpha`，数据默认位于 `%APPDATA%\Alpha`。脚本不会自动修改 Codex / Claude 的 Hooks，也不会自动启动程序或启用开机启动。
+支持 Windows 10/11 x64。安装版默认放在 `%LOCALAPPDATA%\Programs\Alpha`，无需管理员权限。两种版本都默认将个人数据保存在 `%APPDATA%\Alpha`，并在本机单独配置密钥和账号。更新、卸载保留用户数据。
 
-完整步骤、DeepSeek 配置、邮箱、更新和卸载见 **[部署教程](docs/DEPLOYMENT.md)**。
+GitHub 自动附带的 **Source code (zip/tar.gz)** 是源码；普通用户请选择上表的安装包或 `Alpha-v…-windows-x64.zip`。
+
+开发者可按[源码构建说明](docs/DEPLOYMENT.md#开发者从源码构建)安装 Rust 并自行编译。维护者运行 `scripts/package.ps1` 可以生成同样的安装包和 ZIP；仓库提供手动触发的 **Build Windows packages** 工作流。
 
 ## 状态与限制
 
 - 这是独立的衍生项目，不代表上游作者或各 AI/邮箱服务商。
 - Outlook 需要用户注册/提供自己的 OAuth 公共客户端 ID 并完成授权；Proton Bridge 需要相应订阅及本机 Bridge。
 - AI 任务依赖真实客户端事件。没有收到事件会明确显示未接入；完整真实任务兼容性仍需按客户端版本验证。
-- 已禁用继承自上游的自动更新，避免安装回 Daozai。请从本仓库取得更新后重新编译。
+- 已禁用继承自上游的自动更新，避免安装回 Daozai。请从本仓库 Releases 下载新版，退出 Alpha 后安装或替换程序。
 - 图形驱动、显示器缩放、媒体软件和外设会影响兼容性；内存占用会随页面和缓存变化，不承诺固定上限。
 - 快捷翻译不会在点击任意屏幕文字时自动触发；可选中复制后按 `Ctrl+Alt+T`。
 
