@@ -2,7 +2,7 @@
 
 ## Current status
 
-**Alpha Desktop is preparing an eligibility application to SignPath Foundation. It is not yet approved or sponsored, and all currently published v0.1.0 binaries are unsigned.** An application does not mean a certificate has been granted. We do not promise that SmartScreen warnings will disappear immediately.
+**Alpha Desktop submitted an eligibility application to SignPath Foundation on 11 November 2026. It is not yet approved or sponsored, and all currently published v0.1.0 binaries are unsigned.** An application does not mean a certificate has been granted. We do not promise that SmartScreen warnings will disappear immediately.
 
 ## Project provenance
 

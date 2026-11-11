@@ -65,4 +65,4 @@ DeepSeek 密钥和邮箱凭据由 Windows 凭据管理器保存。使用翻译�
 
 ## Code signing policy
 
-正在准备 SignPath Foundation 免费开源签名申请，尚未获批；当前 v0.1.0 下载文件仍未签名。角色、构建来源与后续签名流程见 [Code signing policy](docs/CODE_SIGNING.md)。
+已于 2026 年 11 月 11 日提交 SignPath Foundation 免费开源签名申请，尚未获批；当前 v0.1.0 下载文件仍未签名。角色、构建来源与后续签名流程见 [Code signing policy](docs/CODE_SIGNING.md)。
