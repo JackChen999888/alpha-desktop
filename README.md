@@ -24,8 +24,6 @@ Alpha 是基于 [Daozai](https://github.com/Renly1994/xiaotang-daozai) 二次开
 | AI 额度 | 显示服务端返回的周期/余额；需要相应账号授权，不伪造无数据的额度 |
 | AI 任务 | Codex / Claude Code 生命周期事件、项目与会话区分；需用户安装并审核 Hooks |
 
-Bot 连接、AI 建议和作者赞助板块已移除。
-
 ## 下载与安装
 
 | 适合谁 | 下载 | 使用方式 |
